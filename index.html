@@ -38,6 +38,119 @@
             </nav>
         </div>
     </header>
+
+    <main>
+        <section id="inicio" class="dashboard" aria-labelledby="dashboard-titulo">
+            <h2 id="dashboard-titulo">Resumen General</h2>
+            <dl class="dashboard-stats">
+                <div class="stat">
+                    <dt>Aulas disponibles</dt>
+                    <dd>12</dd>
+                </div>
+                <div class="stat">
+                    <dt>Reservas activas</dt>
+                    <dd>7</dd>
+                </div>
+            </dl>
+        </section>
+
+        <section id="aulas" aria-labelledby="aulas-titulo">
+            <h2 id="aulas-titulo">Listado de Aulas</h2>
+            <table>
+                <caption>Aulas y laboratorios registrados en el sistema</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Código</th>
+                        <th scope="col">Capacidad</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A-101</td>
+                        <td>40</td>
+                        <td>Aula teórica</td>
+                        <td>Disponible</td>
+                    </tr>
+                    <tr>
+                        <td>LAB-02</td>
+                        <td>25</td>
+                        <td>Laboratorio de cómputo</td>
+                        <td>Ocupada</td>
+                    </tr>
+                    <tr>
+                        <td>B-204</td>
+                        <td>35</td>
+                        <td>Aula teórica</td>
+                        <td>Disponible</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="reservar" aria-labelledby="reservar-titulo">
+            <h2 id="reservar-titulo">Reservar Aula</h2>
+            <form action="#" method="post">
+                <div class="campo">
+                    <label for="aula-select">Selección de aula</label>
+                    <select id="aula-select" name="aula" required>
+                        <option value="">-- Seleccione un aula --</option>
+                        <option value="A-101">A-101 (Aula teórica)</option>
+                        <option value="LAB-02">LAB-02 (Laboratorio de cómputo)</option>
+                        <option value="B-204">B-204 (Aula teórica)</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="fecha-reserva">Fecha</label>
+                    <input type="date" id="fecha-reserva" name="fecha" required>
+                </div>
+
+                <div class="campo">
+                    <label for="hora-reserva">Hora</label>
+                    <input type="time" id="hora-reserva" name="hora" required>
+                </div>
+
+                <button type="submit">Reservar</button>
+            </form>
+        </section>
+
+        <section id="mis-reservas" aria-labelledby="mis-reservas-titulo">
+            <h2 id="mis-reservas-titulo">Mis Reservas</h2>
+            <table>
+                <caption>Reservas realizadas por el usuario actual</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Aula</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Horario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A-101</td>
+                        <td>2026-07-20</td>
+                        <td>10:00 - 12:00</td>
+                    </tr>
+                    <tr>
+                        <td>LAB-02</td>
+                        <td>2026-07-22</td>
+                        <td>14:00 - 16:00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="administracion" aria-labelledby="administracion-titulo">
+            <h2 id="administracion-titulo">Administración</h2>
+            <ul>
+                <li><a href="#">Gestionar aulas</a></li>
+                <li><a href="#">Gestionar usuarios</a></li>
+                <li><a href="#">Reportes de ocupación</a></li>
+            </ul>
+        </section>
+    </main>
 </body>
 
 </html>
